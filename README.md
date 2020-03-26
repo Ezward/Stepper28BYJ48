@@ -21,8 +21,7 @@
 
 ## Notes:
 This library is written specifically to drive the 28BYJ-48 stepper motor
-using the ULN2003 controller board with minimal code.  It supports 3 stepping
-modes:
+using the ULN2003 controller board with minimal code.  Stepper motors work by enegizing coils in the motor to attract to internally placed magnets.  By energizing the coils in a specific pattern, the coils are attracted from magnet to magnet, thus turning the spindle.  The 28BYJ-48 stepper motor supports 3 stepping modes (3 coil energizing patterns):
 - **Wave stepping mode** engages 1 of the 4 coils at each step, creating a 4 step
   sequence or approximately 2048 steps per revolution of the output spindle
   (see blow for details).  Because only one coil at a time in energized,
