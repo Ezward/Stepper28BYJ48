@@ -1,0 +1,15 @@
+{
+    "name": "Stepper28BYJ48",
+    "keywords": "Stepper Motor, Stepper, Motor, 28BYJ-48, 28BYJ48, fullstep, halfstep, wavestep, UNL2003",
+    "description": "Small Stepper Library for 28BYJ-48 with ULN2003 Driver.  Supports Full Step, Half Step and Wave Step modes.",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/Ezward/Stepper28BYJ48"
+    },
+    "authors": {
+      "name": "Edward Murphy",
+      "url": "https://github.com/Ezward"
+    },
+    "frameworks": "arduino",
+    "platforms": "*"
+  }
