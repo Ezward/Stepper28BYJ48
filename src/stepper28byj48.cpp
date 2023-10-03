@@ -84,9 +84,9 @@ revolution of the output spindle is given by:
 
 */
 
-#include <arduino.h>
+#include <Arduino.h>
 #include <math.h>
-#include <debug.h>
+#include "debug.h"
 #include "stepper28byj48.h"
 
 //
@@ -179,8 +179,8 @@ double Stepper28BYJ48::getStepsPerRevolution() // RET: number of steps in one re
  * NOTE: The actual RPM is limited by the stepper mode.
  *       Call getMaxSpeed() to determine the maximum possible speed.
  */
-boolean Stepper28BYJ48::startMovement(  // RET: true if movement started, false if not
-  const boolean clockwise,              // IN : kClockwise or kCounterClockwise
+bool Stepper28BYJ48::startMovement(  // RET: true if movement started, false if not
+  const bool clockwise,              // IN : kClockwise or kCounterClockwise
   const double revolutions,             // IN : number of revolutions to move
   const double speed)                   // IN : speed to move in revolutions per minute
 {
@@ -240,7 +240,7 @@ void Stepper28BYJ48::stopMovement()
  *        (so there may be another for() or while() loop in the loop() method)
  *        then you should call this inside the inner loop.
  */
-boolean Stepper28BYJ48::isMoving() // RET: true if still moving, false if done moving
+bool Stepper28BYJ48::isMoving() // RET: true if still moving, false if done moving
 {
     const unsigned long now = micros();
     if(now < this->delayUntilMicros)
@@ -320,7 +320,7 @@ boolean Stepper28BYJ48::isMoving() // RET: true if still moving, false if done m
 /**
  * Get the current movement direction.
  */
-boolean Stepper28BYJ48::getDirection() // RET: kClockwise or kCounterClockwise
+bool Stepper28BYJ48::getDirection() // RET: kClockwise or kCounterClockwise
 {
   return this->clockwise;
 }

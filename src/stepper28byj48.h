@@ -16,8 +16,8 @@ typedef enum StepperMode
 //
 // direction of rotation
 //
-const boolean kClockwise = true;
-const boolean kCounterClockwise = !kClockwise;
+const bool kClockwise = true;
+const bool kCounterClockwise = !kClockwise;
 
 class Stepper28BYJ48
 {
@@ -45,7 +45,7 @@ class Stepper28BYJ48
     // These are converted into steps and waits
     // in order to move the stepper.
     //
-    boolean clockwise = kClockwise; // true is clockwise, false is counter clockwise
+    bool clockwise = kClockwise; // true is clockwise, false is counter clockwise
 
     //
     // The library uses steps to actually drive the motor
@@ -101,8 +101,8 @@ class Stepper28BYJ48
      * NOTE: The actual RPM is limited by the stepper mode.
      *       Call getMaxSpeed() to determine the maximum possible speed
      */
-    boolean startMovement(        // RET: true if movement started, false if not
-      const boolean clockwise,    // IN : kClockwise or kCounterClockwise
+    bool startMovement(        // RET: true if movement started, false if not
+      const bool clockwise,       // IN : kClockwise or kCounterClockwise
       const double revolutions,   // IN : number of revolutions to move
       const double speed);        // IN : speed to move in revolutions per minute
 
@@ -122,12 +122,12 @@ class Stepper28BYJ48
      *        (so there may be another for() or while() loop in the loop() method)
      *        then you should call this inside the inner loop.
      */
-    boolean isMoving();  // RET: true if still moving, false if done moving
+    bool isMoving();  // RET: true if still moving, false if done moving
 
     /**
      * Get the current movement direction.
      */
-    boolean getDirection(); // RET: kClockwise or kCounterClockwise
+    bool getDirection(); // RET: kClockwise or kCounterClockwise
 
     /**
      * Get the remaining steps in the current movement.
