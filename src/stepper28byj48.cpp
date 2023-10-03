@@ -84,7 +84,7 @@ revolution of the output spindle is given by:
 
 */
 
-#include <arduino.h>
+#include <Arduino.h>
 #include <math.h>
 #include "debug.h"
 #include "stepper28byj48.h"
